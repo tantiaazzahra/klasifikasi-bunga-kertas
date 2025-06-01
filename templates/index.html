@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Klasifikasi Bunga Kertas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='site.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/dropify/css/dropify.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/dropify/css/dropify.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/animate-css/vivify.min.css') }}" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="text-center mt-3">
+                <h1>Klasifikasi Bunga Kertas</h1>
+                <p>Unggah gambar bunga kertas yang anda miliki untuk mengecek jenis apa bunga kertas tersebut</p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="upload">
+                    <div class="card">
+                        <div class="body">
+                            <input type="file" class="dropify-fr" id="input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="tombol tombol-custom" id="submit">Klasifikasi</button>
+                <a class="btn btn-secondary" href="/klasifikasi">Reset</a>
+                <a class="btn btn-success" href="/">Kembali</a>
+            </div>
+            <div class="col-md-6 mx-auto mt-3" id="result" style="display: none;">
+                <div class="card">
+                    <div class="body text-center">
+                        <h5 class="card-title">Hasil Klasifikasi</h5>
+                        <p class="card-text">Gambar yang anda unggah adalah <span id="class"></span></p>
+                        <p class="card-text">Tingkat akurasi <span id="persentase"></span>%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='libscripts.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendorscripts.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='dropify.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/dropify/js/dropify.js') }}"></script>
+</html>
