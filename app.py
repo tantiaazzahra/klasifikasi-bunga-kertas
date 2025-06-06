@@ -13,6 +13,10 @@ model = load_model('model/model.h5')
 def home():
     return render_template('welcome.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/klasifikasi')
 def klasifikasi():
     return render_template('index.html')
